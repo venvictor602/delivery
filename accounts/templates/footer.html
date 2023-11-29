@@ -1,0 +1,84 @@
+{% load static %}
+<!-- Main Footer -->
+<footer class="main-footer footer-style-one">
+    <div class="bg bg-image" style="background-image: url({% static 'images/background/2.jpg' %})"></div>
+    <div class="bg footer-shape-1"></div>
+    <div class="icon icon-triangle-3"></div>
+    <!--Widgets Section-->
+    <div class="widgets-section">
+      <div class="auto-container">
+        <div class="row"> 
+          <!--Footer Column-->
+          <div class="footer-column col-xl-4 col-lg-4">
+            <div class="footer-widget about-widget">
+              <div class="logo"><a href="{% url 'home' %}"><img src="{% static 'images/logo-2.png' %}" alt=""></a></div>
+              <div class="text">Loadeo Services is a global supplier of transport and logistics solutions. We have offices in more than 20 countries and an international network of partners and agents.</div>
+              
+            </div>
+          </div>
+          <!--Footer Column-->
+          <div class="footer-column col-xl-4 col-lg-4">
+            <div class="footer-widget links-widget">
+              <h4 class="widget-title">Our Services</h4>
+              <div class="widget-content">
+                <ul class="user-links two-column">
+                  <li><a href="#">Sea Freight</a></li>
+                  <li><a href="#">Ocean Freight</a></li>
+                  <li><a href="#">Road Transport</a></li>
+                  <li><a href="#">Railway Freight</a></li>
+                  <li><a href="#">Railway Logistics</a></li>
+                  <li><a href="#">Warehousing</a></li>
+                  <li><a href="#">Air Flight</a></li>
+                  <li><a href="#">Distribution</a></li>
+                  <li><a href="#">Secure Shopping</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--Footer Column-->
+          <div class="footer-column col-xl-4 col-lg-4">
+            <div class="footer-widget">
+              <h4 class="widget-title">Newsletter</h4>
+              <div class="widget-content">
+                <div class="subscribe-form">
+                  <div class="text">Subscribe newsletter and get recent updates.</div>
+                  <form method="post" action="#">
+                    <div class="form-group">
+                      <input type="email" name="email" class="email" value="" placeholder="Ener your email address...." required="">
+                      <button type="button" class="theme-btn btn-style-one"><span class="btn-ttile">Subscribe</span></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Call To Action -->
+    <div class="call-to-action">
+      <div class="auto-container">
+        <div class="outer-box wow fadeInUp">
+          <div class="title-box">
+            <h3 class="title">Delivering your world one package at a time</h3>
+            <div class="text">Loadeo  is more than logistics.</div>
+          </div>
+          <div class="btn-box"> <a href="{% url 'login' %}" class="theme-btn btn-style-one hover-light"><span class="btn-title">Request a Quote</span></a> </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer Bottom-->
+    <div class="footer-bottom">
+      <div class="auto-container">
+        <div class="inner-container">
+          <div class="copyright-text">&copy; Copyright 2023 All Right Reserved.</div>
+          <ul class="footer-nav">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--End Main Footer -->

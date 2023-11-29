@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <title>loadeo {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+    {% if pickups %}
+  {% for pickup in pickups.all %}
+  <section id="results">
+    <div class="container mt-3 mx-auto">
+      <div class="body-container mt-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="text-uppercase font-weight-bold">Tracking ID: <span id="parcel_id">{{ pickup.trackingid }}</span></h5>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card bg-primary text-dark">
+              <div class="card-body">
+                <h6 class="font-weight-bold">SHIPMENT DATE</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr class="table-secondary">
+                      <td>Estimated Date of Departure (ETD)</td>
+                      <td><span id="departure_date">{{ pickup.Estimated_Date_of_Departuer }}</span></td>
+                    </tr>
+                    <tr class="table-secondary">
+                      <td>Estimated Date of Arrival (ETA)</td>
+                      <td><span id="arrival_day">{{ pickup.Estimated_Date_of_Arrival }}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-primary text-dark">
+              <div class="card-body">
+                <h6 class="font-weight-bold">SHIPMENT DETAILS</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr class="table-secondary">
+                      <td>From</td>
+                      <td><span id="cur_location">{{ pickup.From }}</span></td>
+                    </tr>
+                    <tr class="table-secondary">
+                      <td>To</td>
+                      <td><span id="recepient_country">{{ pickup.To }}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="card bg-primary text-dark">
+              <div class="card-body">
+                <h6 class="font-weight-bold">SENDER'S DETAILS</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr class="text-capitalize table-secondary">
+                      <td>Name</td>
+                      <td><span id="sender">{{ pickup.Sender_Name }}</span></td>
+                    </tr>
+                    <tr class="text-capitalize table-secondary">
+                      <td>Origin</td>
+                      <td><span id="logistic">{{ pickup.Sender_Origin }}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-primary text-dark">
+              <div class="card-body">
+                <h6 class="font-weight-bold">RECEIVER'S DETAILS</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr class="text-capitalize table-secondary">
+                      <td>Name</td>
+                      <td><span id="recepient">{{ pickup.Reciver_Name }}</span></td>
+                    </tr>
+                    <tr class="text-capitalize table-secondary">
+                      <td>Email</td>
+                      <td><span id="recepient_email">{{ pickup.Reciver_Email }}</span></td>
+                    </tr>
+                    <tr class="text-capitalize table-secondary">
+                      <td>Phone</td>
+                      <td><span id="tel">{{ pickup.Reciver_Phone }}</span></td>
+                    </tr>
+                    <tr class="text-capitalize table-secondary">
+                      <td>Address</td>
+                      <td><span id="recepient_address">{{ pickup.Reciver_Address }}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="card bg-primary text-dark">
+              <div class="card-body">
+                <h6 class="font-weight-bold">SHIPPING DETAILS</h6>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr class="text-capitalize table-secondary">
+                          <td>Item Description</td>
+                          <td><span id="descr">{{ pickup.Item_Description }}</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr class="text-capitalize table-secondary">
+                          <td>Weight and Dimension</td>
+                          <td><span id="weight">{{ pickup.Weight_And_Dimension }}</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="card bg-primary text-dark">
+              <div class="card-body">
+                <h6 class="font-weight-bold">TRAVEL TIMELINE</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr class="table-secondary">
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Activity</th>
+                      <th>Location</th>
+                    </tr>
+                  </thead>
+                  <tbody id="logs_table">
+                    {% for timeline in pickup.timeline.all %}
+                    <tr class="text-capitalize">
+                      <td>{{ timeline.Date }}</td>
+                      <td>{{ timeline.Time }}</td>
+                      <td>{{ timeline.Activity }}</td>
+                      <td>{{ timeline.Location }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+{% else %}
+<div class="container">
+  <h4>Enter a Valid Tracking ID</h4>
+</div>
+{% endif %}
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

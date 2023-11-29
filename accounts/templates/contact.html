@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Start main-content -->
+<section class="page-title" style="background-image: url({% static 'images/background/page-title-bg.jpg' %});">
+    <div class="auto-container">
+        <div class="title-outer text-center mt-5">
+            <ul class="page-breadcrumb">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Contact</li>
+            </ul>
+            <h1 class="title">Contact Us</h1>
+        </div>
+    </div>
+</section>
+<!-- end main-content -->
+
+<!--Contact Details Start-->
+<section class="contact-details">
+    <div class="container ">
+        <div class="row">
+            <div class="col-xl-7 col-lg-6">
+                <div class="sec-title">
+                    <span class="sub-title">Send us email</span>
+                    <h2>Feel free to write</h2>
+                    <p>{% include 'aleart.html' %}</p>
+                </div>
+                <!-- Contact Form -->
+                <form  action="{% url 'contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <input name="name" class="form-control" type="text" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <input name="email" class="form-control required email" type="email" placeholder="Enter Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <input name="subject" class="form-control required" type="text" placeholder="Enter Subject">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <input name="phone" class="form-control" type="text" placeholder="Enter Phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control required" rows="7" placeholder="Enter Message"></textarea>
+                    </div>
+                    <div class="mb-5">
+                        <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                        <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
+                        
+                    </div>
+                </form>
+                <!-- Contact Form Validation-->
+            </div>
+            <div class="col-xl-5 col-lg-6">
+                <div class="contact-details__right">
+                    <div class="sec-title">
+                        <span class="sub-title">Need any help?</span>
+                        <h2>Get in touch with us</h2>
+                        <div class="text">If you have any questions about what we offer for consumers or for business, you can always email us or call us via the below details. We’ll reply within 24 hours.</div>
+                    </div>
+                    <ul class="list-unstyled contact-details__info">
+                        <li>
+                            <div class="icon bg-theme-color2">
+                                <span class="lnr-icon-phone-plus"></span>
+                            </div>
+                            <div class="text">
+                                <h6 class="mb-1">Have any question?</h6>
+                                <a href="tel:980089850"><span>Free</span> +92 (020)-9850</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <span class="lnr-icon-envelope1"></span>
+                            </div>
+                            <div class="text">
+                                <h6 class="mb-1">Write email</h6>
+                                <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <span class="lnr-icon-location"></span>
+                            </div>
+                            <div class="text">
+                                <h6 class="mb-1">Visit anytime</h6>
+                                <span>66 broklyn golden street. New York</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Contact Details End-->
+    
+{% endblock content %}
+ 

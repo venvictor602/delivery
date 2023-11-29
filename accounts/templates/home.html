@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- Banner Section -->
+ <section class="banner-section">
+    <!-- Overlay Shapes -->
+    <div class="overlay-shape"></div>
+    <div class="banner-carousel owl-carousel owl-theme default-dots">
+      <div class="slide-item">
+        <div class="bg bg-image" style="background-image: url({% static 'images/banner/1.jpg' %});"></div>
+        <div class="auto-container">
+          <div class="content-box">
+            <h1 class="title animate-2">Easy & Quick  Cargo <br>Shipping Services</h1>
+            <div class="text animate-3">Book low cost Sea Freight Shipping Services. Get <br>an instant quote. Start here...</div>
+            <div class="btn-box animate-4">
+              <a href="{% url 'login' %}" class="theme-btn btn-style-one wow fadeInUp" data-wow-delay="900ms"><span class="btn-title">Explore More</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-item">
+        <div class="bg bg-image" style="background-image: url({% static 'images/banner/1.jpg' %});"></div>
+        <div class="auto-container">
+          <div class="content-box">
+            <h1 class="title animate-2">Easy & Quick  Cargo <br>Shipping Services</h1>
+            <div class="text animate-3">Book low cost Sea Freight Shipping Services. Get <br>an instant quote. Start here...</div>
+            <div class="btn-box animate-4">
+              <a href="{% url 'login' %}" class="theme-btn btn-style-one wow fadeInUp" data-wow-delay="900ms"><span class="btn-title">Explore More</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Banner Section -->
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="auto-container">
+      <div class="row align-items-xl-center">
+        <div class="content-column col-xl-6 col-lg-12 order-xl-2 wow fadeInRight" data-wow-delay="600ms">
+          <div class="inner-column pt-0">
+            <div class="sec-title">
+              <span class="sub-title">TRANSPORTATION COMPANY</span>
+              <h2>We Provide Full Range Logistics Solution</h2>
+            </div>
+            <div class="content-box">
+              <div class="text">We strongly believe that pursuing all of these goals is in our interest and in the interest of all of our stakeholders are us customers, employees, investors and the planet as a whole. We add value to cargo people’s interaction with us, with excellent services or products.<br>
+
+                Engaging our employees and nurturinvestment on the stock holds market we show concern , by engaging our employees and nurturinvestment on the stock holds market we show concern. </div>
+              <div class="info-box-outer">
+                <div class="about-block">
+                  <div class="inner">
+                    <i class="icon flaticon-trolley"></i>
+                    <h6 class="title">Reduced Transit Time </h6>
+                  </div>
+                </div>
+                <div class="about-block">
+                  <div class="inner">
+                    <i class="icon flaticon-logistics-6"></i>
+                    <h6 class="title">Reduced Transit Time</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="author-info">
+                <figure class="thumb"><img src="{% static 'images/resource/ceo-thumb.jpg' %}" alt=""></figure>
+                <h4 class="name">Mikalal Walker</h4>
+                <span class="designation">CEO, Transpress</span>
+                <img src="{% static 'images/resource/sign.jpg' %}" alt="" class="sign">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="image-column col-xl-6 col-lg-12">
+          <div class="inner-column wow">
+            <div class="image-box">
+              <figure class="image-1 overlay-anim wow fadeInUp"><img src="{% static 'images/resource/about-1-1.jpg' %}" alt=""></figure>
+              <figure class="image-3 overlay-anim wow fadeInRight"><img src="{% static 'images/resource/about-1-3.jpg' %}" alt=""></figure>
+              <figure class="image-2 overlay-anim wow fadeInRight"><img src="{% static 'images/resource/about-1-2.jpg' %}" alt=""></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End About Section -->
+  <!-- Services Section -->
+<section class="services-section pt-0">
+  <div class="anim-icons">
+      <span class="icon icon-plane-1 bounce-y"></span>
+  </div>
+  <div class="auto-container">
+      <div class="sec-title text-center">
+          <span class="sub-title">Types Of Logistics</span>
+          <h2>Covering All Logistics Fields</h2>
+      </div>
+      <div class="services-carousel owl-carousel owl-theme default-dots">
+          <!-- Service Block -->
+          <div class="service-block">
+              <div class="inner-box">
+                  <div class="content-box">
+                      <h4 class="title"><a href="{% url 'services' %}">Land Transport</a></h4>
+                      <div class="text">Cargo are transported at some stage of their journey along the world’s roads where we give you a presence.</div>
+                  </div>
+                  <div class="image-box">
+                      <a href="{% url 'services' %}" title="" class="read-more"><i class="lnr-icon-arrow-up"></i></a>
+                      <figure class="image"><a href="{% url 'services' %}"><img src="{% static 'images/resource/service-1-1.jpg' %}" alt=""></a></figure>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Block -->
+          <div class="service-block">
+              <div class="inner-box">
+                  <div class="content-box">
+                      <h4 class="title"><a href="{% url 'services' %}">Train Freight</a></h4>
+                      <div class="text">As a leader in global air freight forwarding, OIA Global excels in providing tailored transportation</div>
+                  </div>
+                  <div class="image-box">
+                      <a href="{% url 'services' %}" title="" class="read-more"><i class="lnr-icon-arrow-up"></i></a>
+                      <figure class="image"><a href="{% url 'services' %}"><img src="{% static 'images/resource/service-1-2.jpg' %}" alt=""></a></figure>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Block -->
+          <div class="service-block">
+              <div class="inner-box">
+                  <div class="content-box">
+                      <h4 class="title"><a href="{% url 'services' %}">Sea Freight</a></h4>
+                      <div class="text">Sea Freight plays perhaps the most vital role in most transportation and supply chain solutions.</div>
+                  </div>
+                  <div class="image-box">
+                      <a href="{% url 'services' %}" title="" class="read-more"><i class="lnr-icon-arrow-up"></i></a>
+                      <figure class="image"><a href="{% url 'services' %}"><img src="{% static 'images/resource/service-1-3.jpg' %}" alt=""></a></figure>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Block -->
+          <div class="service-block">
+              <div class="inner-box">
+                  <div class="content-box">
+                      <h4 class="title"><a href="{% url 'services' %}">Warehoues</a></h4>
+                      <div class="text">Package and store your things effectively and securely to make sure them in storage, have certified warehouse.</div>
+                  </div>
+                  <div class="image-box">
+                      <a href="{% url 'services' %}" title="" class="read-more"><i class="lnr-icon-arrow-up"></i></a>
+                      <figure class="image"><a href="{% url 'services' %}"><img src="{% static 'images/resource/service-1-4.jpg' %}" alt=""></a></figure>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End Services Section -->
+  
+  <!-- Tracking Section -->
+  <section class="tracking-section pull-down">
+    <div class="anim-icons full-width">
+      <div class="icon icon-triangle"></div>
+    </div>
+    <div class="auto-container">
+      <div class="outer-box">
+        <div class="row">
+          <!-- Form Column -->
+          <div class="form-column col-lg-7">
+            <div class="inner-column">
+              <div class="tracking-form">
+                <h3 class="title">Track Your Order</h3>
+                <div class="text">Get everything you need to know to track your parcel here</div>
+                <!-- Tracking Form -->
+                <form method="post" action="">
+                  
+                  <div class="form-group">
+                    
+                    <a href="{% url 'login' %}" type="submit" class="theme-btn btn-style-one"><span class="btn-title">Track Order</span></a href="">
+                  </div>
+                </form>
+                <!-- End Tracking Form -->
+              </div>
+            </div>
+          </div>
+          <!-- Image Column -->
+          <div class="image-column col-lg-5">
+            <div class="inner-column">
+              <figure class="image wow zoomIn"><img src="{% static 'images/resource/tracking.png" alt=""></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Tracking Section -->
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <div class="bg bg-pattern-1"></div>
+    <div class="anim-icons full-width">
+      <span class="icon icon-triangle-2"></span>
+    </div>
+    <div class="auto-container">    
+      <div class="row">
+        <!-- Content Column -->
+        <div class="content-column col-lg-6 wow fadeInLeft">
+          <div class="inner-column">
+            <div class="sec-title">
+              <span class="sub-title"> What We Offer</span>
+              <h2>We Provide Timely & Cost-Effective Delivery</h2>
+            </div>
+            <ul class="features-list">
+              <li><div class="icon-arrow"></div> Real-Time Tracking</li>
+              <li><div class="icon-arrow"></div> Security For Cargo</li>
+              <li><div class="icon-arrow"></div> Competitive Pricing</li>
+              <li><div class="icon-arrow"></div> Ground Transport</li>
+            </ul>
+            <!--Skills-->
+            <div class="skills">
+              <!--Skill Item-->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-title">Successful Shipment</div>
+                </div>
+                <div class="skill-bar">
+                  <div class="bar-inner">
+                    <div class="bar progress-line" data-width="100">
+                      <div class="skill-percentage">
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="100">0</span>%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Skill Item-->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-title">Customer Satisfaction</div>
+                </div>
+                <div class="skill-bar">
+                  <div class="bar-inner">
+                    <div class="bar progress-line" data-width="100">
+                      <div class="skill-percentage">
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="100">0</span>%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Skill Item-->
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-title">Products Delivery</div>
+                </div>
+                <div class="skill-bar">
+                  <div class="bar-inner">
+                    <div class="bar progress-line" data-width="100">
+                      <div class="skill-percentage">
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="100">0</span>%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Video Column -->
+        <div class="video-column col-lg-6 wow fadeInRight">
+          <div class="inner-column">
+            <div class="video-box">
+              <figure class="image wow zoomIn"><img src="{% static 'images/resource/why-us-1.jpg' %}" alt=""></figure>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sponsors-outer">
+        <!--clients carousel-->
+        <ul class="clients-carousel owl-carousel owl-theme">
+          <li class="client-block"> <a href="#"><img src="{% static 'images/clients/1.png' %}" alt=""></a> </li>
+          <li class="client-block"> <a href="#"><img src="{% static 'images/clients/2.png' %}" alt=""></a> </li>
+          <li class="client-block"> <a href="#"><img src="{% static 'images/clients/3.png' %}" alt=""></a> </li>
+          <li class="client-block"> <a href="#"><img src="{% static 'images/clients/4.png' %}" alt=""></a> </li>
+          <li class="client-block"> <a href="#"><img src="{% static 'images/clients/5.png' %}" alt=""></a> </li>
+          <li class="client-block"> <a href="#"><img src="{% static 'images/clients/6.png' %}" alt=""></a> </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--End Clients Section -->
+    
+{% endblock content %}
+    

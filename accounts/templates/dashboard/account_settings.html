@@ -1,0 +1,25 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="ugf-container">
+          <div class="content-wrap">
+            <div class="ugf-form-block-header">
+              <h1 class="text-danger">Complete Your Account Setup</h1>
+              <p class="text-danger">
+                {% comment %} Upload Your Front and Back of Your Identification Card<br>{% include 'dashboard/alearts.html' %} {% endcomment %}
+              </p>
+            </div>
+            <div class="ugf-input-block">
+                <form method='POST' enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{user_form|crispy}}
+                    {{profile_form|crispy}}          
+                    <input type="submit" value="Login" class="btn btn-danger btn-block mt-5">
+              </form>
+            </div>
+{% endblock content %}
+    
